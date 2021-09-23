@@ -1,0 +1,8 @@
+.navbar {
+  background-color: black;
+  width: 20%;
+  display: block;
+  border: 1px solid black;
+  border: 2px solid red;
+  height: 100%;
+}

@@ -1,0 +1,7 @@
+.navbar {
+  background-color: black;
+  width: 1000px;
+  height: 123px;
+  border: 1px solid black;
+  display: inline-block;
+}
