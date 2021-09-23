@@ -14,7 +14,10 @@ class App extends Component {
         <Header />
         <div className={style.center}>
           <Navbar />
-          <Muzis />
+          <div className={style.muziContainer}>
+            <Muzis />
+            <MuziForm />
+          </div>
           <DetailMuzi />
         </div>
       </section>

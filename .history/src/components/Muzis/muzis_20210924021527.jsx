@@ -6,20 +6,11 @@ import styles from './muzis.module.css';
 class Muzis extends Component {
   render() {
     return (
-      <section className={styles.allContainer}>
+      <>
         <ul className={styles.container}>
           <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
-          <Muzi />
         </ul>
-        <MuziForm />
-      </section>
+      </>
     );
   }
 }

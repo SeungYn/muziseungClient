@@ -1,13 +1,9 @@
-.allContainer {
+.container {
   flex-basis: 50%;
   height: 100%;
   background-color: pink;
   border: 2px solid blue;
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
   overflow: scroll;
   overflow-x: hidden;
+  position: relative;
 }

@@ -17,8 +17,8 @@ class Muzis extends Component {
           <Muzi />
           <Muzi />
           <Muzi />
+          <MuziForm />
         </ul>
-        <MuziForm />
       </section>
     );
   }
