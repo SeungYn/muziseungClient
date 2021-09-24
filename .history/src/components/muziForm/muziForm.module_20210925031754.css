@@ -1,0 +1,58 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 0;
+}
+
+.text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 10px;
+}
+
+.middleContainer {
+  border: 2px solid #b0bec5;
+  background-color: #546e7a;
+  border-radius: 2px;
+}
+.text {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  height: 32px;
+  border-radius: 2px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.text:hover .middleContainer {
+  border-color: black;
+  background-color: black;
+}
+
+.bottom::after {
+  content: '@';
+  display: block;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #546e7a;
+}
+.bottom {
+  position: relative;
+}
+
+.muziButton {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  top: 0;
+  z-index: 1;
+}
