@@ -1,0 +1,9 @@
+.form {
+  width: 100%;
+  display: flex;
+}
+
+.text {
+  width: 100%;
+  resize: none;
+}

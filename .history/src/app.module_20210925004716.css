@@ -1,0 +1,17 @@
+.borad {
+  background-color: yellow;
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  height: 95%;
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}

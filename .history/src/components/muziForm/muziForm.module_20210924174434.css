@@ -1,0 +1,28 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+}
+
+.bottom:after {
+  content: '';
+  display: block;
+  background-color: yellow;
+}
+
+.bottom {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}

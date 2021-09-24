@@ -1,0 +1,40 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+  font-size: 0;
+}
+.middleContainer {
+  border: 1px solid #b0bec5;
+  border-radius: 2px;
+}
+.text {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+
+  background-color: transparent;
+  padding: 0;
+}
+.bottom::after {
+  content: '@';
+  display: block;
+  font-size: 1rem;
+  background-color: #546e7a;
+  color: #546e7a;
+}
+.bottom {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  cursor: pointer;
+  right: 0px;
+  top: 0;
+  z-index: 1;
+}

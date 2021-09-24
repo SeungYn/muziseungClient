@@ -1,0 +1,12 @@
+.container {
+  background-color: red;
+  flex-basis: 35%;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments {
+  overflow: scroll;
+  overflow-x: hidden;
+}
