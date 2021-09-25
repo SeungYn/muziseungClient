@@ -72,36 +72,23 @@ class App extends Component {
   };
 
   muzisRef = React.createRef();
-
-  //댓글 창을 열고 닫은 것을 muzi가 선택됐을떄로 변경함 상위 컴퍼넌트에서 하위컴퍼넌트 스타일을
-  //변경하는 것이아님 근데 이것을 하려다가 이 메서드때문에 작동이 잘안됐었음
-  // muzisExpand = () => {
-  //   this.muzisRef.current.style.flexBasis = '85%';
-  // };
+  muzisExpand = () => {
+    this.muzisRef.current.style.flexBasis = '85%';
+  };
 
   //무지 클릭시 선택되게 하기
   onClickSelectMuzi = (muzi) => {
-    this.setState({ selectedMuzi: true });
+    const selectedMuzi = { selectedMuzi: true };
+    console.log(selectedMuzi);
+    this.setState((state) => state.electedMuzi);
   };
   //detailMuzi에 있는 x있는 거 클릭시 화면 늘리기 이럴꺼면 왜 상위 컴퍼넌트 ref 할려고 똥꼬쇼 한거지;;
   //다시생각하니 state 비교를 했을때 똑같아서 실행안됨 ㅋㅇ 보류 다시 원상복구
   unClickSelectMuzi = (muzi) => {
-    this.setState({ selectedMuzi: null });
-  };
-
-  onAddMuzi = (text) => {
-    const muzis = [
-      ...this.state.muzis,
-      {
-        id: Date.now(),
-        userName: '유승윤',
-        time: '11:31',
-        text,
-        comments: null,
-      },
-    ];
-
-    this.setState({ muzis });
+    const selectedMuzi = { selectedMuzi: null };
+    console.log('unclick');
+    console.log(this.state.selectedMuzi);
+    this.setState({ selectedMuzi });
   };
 
   render() {
@@ -116,12 +103,10 @@ class App extends Component {
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}
-            onAddMuzi={this.onAddMuzi}
           />
           {this.state.selectedMuzi && (
             <DetailMuzi
               muzisExpand={this.muzisExpand}
-              selectedMuzi={this.state.selectedMuzi}
               unClickSelectMuzi={this.unClickSelectMuzi}
             />
           )}

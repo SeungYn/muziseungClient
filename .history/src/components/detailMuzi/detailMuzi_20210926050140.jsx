@@ -5,21 +5,17 @@ import styles from './detailMuzi.module.css';
 class DetailMuzi extends Component {
   containerRef = React.createRef();
   deleteComments = () => {
+    this.containerRef.current.style.display = 'none';
+    this.props.muzisExpand();
     this.props.unClickSelectMuzi();
   };
-  //이부분이 문제였음 이것때문에 flex-basis가 50를 유지못함 정확히는
-  // deleteComments = () => {
-  //   this.containerRef.current.style.display = 'none';
-  //   this.props.muzisExpand(); <정확히는 이함수
-  //   this.props.unClickSelectMuzi();
-  // };
 
   render() {
     return (
       <section
         ref={this.containerRef}
         className={`${styles.container} ${
-          this.props.selectedMuzi ? styles.selected : styles.unselected
+          this.props.selectedMuzi ? styles.unselected : styles.unselected
         }`}
       >
         <div className={styles.header}>

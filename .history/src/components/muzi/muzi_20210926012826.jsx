@@ -9,13 +9,11 @@ class Muzi extends Component {
     const { id, userName, time, text, comments } = this.props.muzi;
 
     return (
-      <li className={styles.muzi} onClick={this.onClickSelectMuzi}>
+      <li className={styles.muzi}>
         <span className={styles.name}>{userName}</span>
         <span className={styles.time}>{time}</span>
         <p className={styles.text}>{text}</p>
-        {comments && (
-          <div className={styles.comment}>{`${comments.length}개의 답글`}</div>
-        )}
+        <div className={styles.comment}>{`${comments.length}개의 답글`}</div>
       </li>
     );
   }

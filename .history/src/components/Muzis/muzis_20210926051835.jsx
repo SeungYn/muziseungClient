@@ -28,7 +28,7 @@ class Muzis extends Component {
             />
           ))}
         </ul>
-        <MuziForm onAddMuzi={this.props.onAddMuzi} />
+        <MuziForm />
       </section>
     );
   }

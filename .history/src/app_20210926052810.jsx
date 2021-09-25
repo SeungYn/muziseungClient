@@ -93,7 +93,7 @@ class App extends Component {
     const muzis = [
       ...this.state.muzis,
       {
-        id: Date.now(),
+        id: 1,
         userName: '유승윤',
         time: '11:31',
         text,
@@ -116,7 +116,6 @@ class App extends Component {
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}
-            onAddMuzi={this.onAddMuzi}
           />
           {this.state.selectedMuzi && (
             <DetailMuzi

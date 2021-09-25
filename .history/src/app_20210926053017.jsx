@@ -93,7 +93,7 @@ class App extends Component {
     const muzis = [
       ...this.state.muzis,
       {
-        id: Date.now(),
+        id: 1,
         userName: '유승윤',
         time: '11:31',
         text,

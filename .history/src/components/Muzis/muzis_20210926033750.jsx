@@ -7,6 +7,8 @@ class Muzis extends Component {
   allContainerRef = this.props.inputRef;
 
   render() {
+    console.log(`Muzis : ${this.props.selectedMuzi}`);
+    console.log(this.props.muzis);
     return (
       <section
         ref={this.allContainerRef}
@@ -28,7 +30,7 @@ class Muzis extends Component {
             />
           ))}
         </ul>
-        <MuziForm onAddMuzi={this.props.onAddMuzi} />
+        <MuziForm />
       </section>
     );
   }

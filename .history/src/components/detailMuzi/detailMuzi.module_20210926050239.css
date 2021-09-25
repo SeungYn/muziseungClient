@@ -2,7 +2,7 @@
   background-color: red;
 
   border: 2px solid green;
-  display: flex;
+display:flex
   flex-direction: column;
 }
 

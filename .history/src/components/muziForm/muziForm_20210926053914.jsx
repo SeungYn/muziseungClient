@@ -14,19 +14,12 @@ class MuziForm extends Component {
   onSubmit = () => {
     const text = this.textRef.current.value;
     text && this.props.onAddMuzi(text);
-    this.formRef.current.reset();
-    const obj = this.textRef.current;
-    obj.style.height = 'auto';
+    this.textRef.current.reset();
   };
 
   render() {
     return (
-      <form
-        action=''
-        ref={this.formRef}
-        className={styles.form}
-        onSubmit={this.onSubmit}
-      >
+      <form action='' className={styles.form} onSubmit={this.onSubmit}>
         <div className={styles.middleContainer}>
           <textarea
             ref={this.textRef}

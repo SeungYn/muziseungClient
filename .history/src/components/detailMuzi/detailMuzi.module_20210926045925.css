@@ -2,17 +2,13 @@
   background-color: red;
 
   border: 2px solid green;
-  display: flex;
+
   flex-direction: column;
 }
 
 .selected {
   flex-basis: 35%;
   display: flex;
-}
-
-.unselected {
-  display: none;
 }
 
 .comments {

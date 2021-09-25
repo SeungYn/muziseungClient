@@ -5,14 +5,19 @@ import styles from './muzis.module.css';
 
 class Muzis extends Component {
   allContainerRef = this.props.inputRef;
+  asd = () => {
+    this.allContainerRef.current.style.flexBasis = '50%';
+  };
 
   render() {
+    console.log(`Muzis : ${this.props.selectedMuzi.selectedMuzi}`);
+    console.log(this.props.muzis);
     return (
       <section
         ref={this.allContainerRef}
         className={`${styles.allContainer}
           ${
-            this.props.selectedMuzi
+            this.props.selectedMuzi.selectedMuzi
               ? styles.unSelectedMuzi
               : styles.selectedMuzi
           }
@@ -28,7 +33,7 @@ class Muzis extends Component {
             />
           ))}
         </ul>
-        <MuziForm onAddMuzi={this.props.onAddMuzi} />
+        <MuziForm />
       </section>
     );
   }

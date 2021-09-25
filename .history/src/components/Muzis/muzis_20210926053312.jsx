@@ -22,7 +22,7 @@ class Muzis extends Component {
         <ul className={styles.container}>
           {this.props.muzis.map((m) => (
             <Muzi
-              key={m.id}
+              key={new Date()}
               muzi={m}
               onClickSelectMuzi={this.props.onClickSelectMuzi}
             />

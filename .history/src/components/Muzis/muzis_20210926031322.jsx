@@ -5,8 +5,8 @@ import styles from './muzis.module.css';
 
 class Muzis extends Component {
   allContainerRef = this.props.inputRef;
-
   render() {
+    console.log(`Muzis : ${this.props.selectedMuzi}`);
     return (
       <section
         ref={this.allContainerRef}
@@ -28,7 +28,7 @@ class Muzis extends Component {
             />
           ))}
         </ul>
-        <MuziForm onAddMuzi={this.props.onAddMuzi} />
+        <MuziForm />
       </section>
     );
   }

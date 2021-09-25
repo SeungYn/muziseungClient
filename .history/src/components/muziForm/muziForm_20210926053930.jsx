@@ -15,8 +15,6 @@ class MuziForm extends Component {
     const text = this.textRef.current.value;
     text && this.props.onAddMuzi(text);
     this.formRef.current.reset();
-    const obj = this.textRef.current;
-    obj.style.height = 'auto';
   };
 
   render() {

@@ -14,9 +14,7 @@ class MuziForm extends Component {
   onSubmit = () => {
     const text = this.textRef.current.value;
     text && this.props.onAddMuzi(text);
-    this.formRef.current.reset();
-    const obj = this.textRef.current;
-    obj.style.height = 'auto';
+    this.textRef.current.reset();
   };
 
   render() {

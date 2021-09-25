@@ -15,6 +15,7 @@ class DetailMuzi extends Component {
   // };
 
   render() {
+    console.log('asd', this.props.selectedMuzi);
     return (
       <section
         ref={this.containerRef}

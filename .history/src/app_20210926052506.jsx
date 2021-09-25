@@ -90,18 +90,13 @@ class App extends Component {
   };
 
   onAddMuzi = (text) => {
-    const muzis = [
-      ...this.state.muzis,
-      {
-        id: Date.now(),
-        userName: '유승윤',
-        time: '11:31',
-        text,
-        comments: null,
-      },
-    ];
-
-    this.setState({ muzis });
+    muzi = {
+      id: 1,
+      userName: '유승윤',
+      time: '11:31',
+      text,
+      comments: null,
+    };
   };
 
   render() {
@@ -116,7 +111,6 @@ class App extends Component {
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}
-            onAddMuzi={this.onAddMuzi}
           />
           {this.state.selectedMuzi && (
             <DetailMuzi
