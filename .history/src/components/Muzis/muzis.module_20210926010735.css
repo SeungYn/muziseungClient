@@ -1,17 +1,10 @@
 .allContainer {
+  flex-basis: 85%;
   height: 100%;
   background-color: pink;
   border: 2px solid blue;
   display: flex;
   flex-direction: column;
-}
-
-.selectedMuzi {
-  flex-basis: 85%;
-}
-
-.unSelectedMuzi {
-  flex-basis: 50%;
 }
 
 .container {

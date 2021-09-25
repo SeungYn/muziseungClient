@@ -7,16 +7,7 @@ class Muzis extends Component {
   allContainerRef = this.props.inputRef;
   render() {
     return (
-      <section
-        ref={this.allContainerRef}
-        className={`${styles.allContainer}
-          ${
-            this.props.selectedMuzi
-              ? styles.unSelectedMuzi
-              : styles.selectedMuzi
-          }
-        `}
-      >
+      <section ref={this.allContainerRef} className={styles.allContainer}>
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>
           {this.props.muzis.map((m) => (

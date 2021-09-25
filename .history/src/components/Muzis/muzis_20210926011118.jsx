@@ -9,13 +9,9 @@ class Muzis extends Component {
     return (
       <section
         ref={this.allContainerRef}
-        className={`${styles.allContainer}
-          ${
-            this.props.selectedMuzi
-              ? styles.unSelectedMuzi
-              : styles.selectedMuzi
-          }
-        `}
+        className={styles.allContainer(
+          this.props.selectedMuzi ? styles.selectedMuzi : styles.unSelectedMuzi
+        )}
       >
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>

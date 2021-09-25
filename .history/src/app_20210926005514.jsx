@@ -9,7 +9,6 @@ import MuziForm from './components/muziForm/muziForm';
 
 class App extends Component {
   state = {
-    selectedMuzi: null,
     muzis: [
       {
         id: 1,
@@ -76,6 +75,34 @@ class App extends Component {
     this.muzisRef.current.style.flexBasis = '85%';
   };
 
+  muzi = {
+    id: 1,
+    userId: 1,
+    userName: '유승윤',
+    time: '12:01',
+    text: '안녕하세요',
+    comments: [
+      {
+        id: 1,
+        userName: '이혜진',
+        time: '12:01',
+        text: '안녕하세요',
+      },
+      {
+        id: 1,
+        userName: '이혜진',
+        time: '12:01',
+        text: '안녕하세요',
+      },
+      {
+        id: 1,
+        userName: '이혜진',
+        time: '12:01',
+        text: '안녕하세요',
+      },
+    ],
+  };
+
   render() {
     return (
       <section className={style.borad}>
@@ -83,14 +110,11 @@ class App extends Component {
         <div className={style.center}>
           <Navbar />
           <Muzis
-            selectedMuzi={this.state.selectedMuzi}
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}
           />
-          {this.state.selectedMuzi && (
-            <DetailMuzi muzisExpand={this.muzisExpand} />
-          )}
+          {muzi && <DetailMuzi muzisExpand={this.muzisExpand} />}
         </div>
       </section>
     );

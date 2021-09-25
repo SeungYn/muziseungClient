@@ -83,7 +83,6 @@ class App extends Component {
         <div className={style.center}>
           <Navbar />
           <Muzis
-            selectedMuzi={this.state.selectedMuzi}
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}

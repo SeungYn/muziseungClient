@@ -9,7 +9,7 @@ import MuziForm from './components/muziForm/muziForm';
 
 class App extends Component {
   state = {
-    selectedMuzi: null,
+    selectedMuzi: true,
     muzis: [
       {
         id: 1,
@@ -83,12 +83,11 @@ class App extends Component {
         <div className={style.center}>
           <Navbar />
           <Muzis
-            selectedMuzi={this.state.selectedMuzi}
             muzis={this.state.muzis}
             inputRef={this.muzisRef}
             muzisOnClick={this.muzisOnClick}
           />
-          {this.state.selectedMuzi && (
+          {this.state.selectedmuzi && (
             <DetailMuzi muzisExpand={this.muzisExpand} />
           )}
         </div>

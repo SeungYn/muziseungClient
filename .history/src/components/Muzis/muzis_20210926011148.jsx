@@ -12,8 +12,8 @@ class Muzis extends Component {
         className={`${styles.allContainer}
           ${
             this.props.selectedMuzi
-              ? styles.unSelectedMuzi
-              : styles.selectedMuzi
+              ? styles.selectedMuzi
+              : styles.unSelectedMuzi
           }
         `}
       >

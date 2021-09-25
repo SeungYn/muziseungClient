@@ -9,7 +9,7 @@ import MuziForm from './components/muziForm/muziForm';
 
 class App extends Component {
   state = {
-    selectedMuzi: null,
+    selectedMuzi: true,
     muzis: [
       {
         id: 1,
