@@ -10,7 +10,7 @@ class DetailMuzi extends Component {
   };
 
   render() {
-    console.log(this.props.muzi, 'd');
+    console.log(this.props.muzi);
     return (
       <section ref={this.containerRef} className={styles.container}>
         <div className={styles.header}>

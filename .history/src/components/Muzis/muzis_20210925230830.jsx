@@ -11,7 +11,7 @@ class Muzis extends Component {
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>
           {this.props.muzis.map((m) => (
-            <Muzi key={m.id} muzi={m} muzisOnClick={this.props.muzisOnClick} />
+            <Muzi key={m.id} muzi={m} />
           ))}
         </ul>
         <MuziForm />

@@ -81,11 +81,7 @@ class App extends Component {
         <Header />
         <div className={style.center}>
           <Navbar />
-          <Muzis
-            muzis={this.state.muzis}
-            inputRef={this.muzisRef}
-            muzisOnClick={this.muzisOnClick}
-          />
+          <Muzis muzis={this.state.muzis} inputRef={this.muzisRef} />
           <DetailMuzi
             muzisExpand={this.muzisExpand}
             muzi={this.muzisOnClick()}

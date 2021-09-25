@@ -23,18 +23,6 @@ class App extends Component {
             time: '12:01',
             text: '안녕하세요',
           },
-          {
-            id: 1,
-            userName: '이혜진',
-            time: '12:01',
-            text: '안녕하세요',
-          },
-          {
-            id: 1,
-            userName: '이혜진',
-            time: '12:01',
-            text: '안녕하세요',
-          },
         ],
       },
       {
@@ -43,14 +31,12 @@ class App extends Component {
         userName: '유승윤',
         time: '12:01',
         text: '안녕하세요1123123ㅁㅈㅇㅁㅉㄹㄷㅁㄹㅈㄷㄹㅉㄹㄷㄹ',
-        comments: [
-          {
-            id: 2,
-            userName: '이혜진',
-            time: '12:01',
-            text: '안녕하세요',
-          },
-        ],
+        comments: {
+          id: 2,
+          userName: '이혜진',
+          time: '12:01',
+          text: '안녕하세요',
+        },
       },
       {
         id: 3,
@@ -58,14 +44,12 @@ class App extends Component {
         userName: '유승윤',
         time: '12:01',
         text: '안녕ㅁㄷㅎ하세ㄷㄱㅎㄷ요',
-        comments: [
-          {
-            id: 3,
-            userName: '이혜진',
-            time: '12:01',
-            text: '안녕하세요',
-          },
-        ],
+        comments: {
+          id: 3,
+          userName: '이혜진',
+          time: '12:01',
+          text: '안녕하세요',
+        },
       },
     ],
   };
@@ -74,22 +58,14 @@ class App extends Component {
   muzisExpand = () => {
     this.muzisRef.current.style.flexBasis = '85%';
   };
-  muzisOnClick = (muzi) => muzi;
   render() {
     return (
       <section className={style.borad}>
         <Header />
         <div className={style.center}>
           <Navbar />
-          <Muzis
-            muzis={this.state.muzis}
-            inputRef={this.muzisRef}
-            muzisOnClick={this.muzisOnClick}
-          />
-          <DetailMuzi
-            muzisExpand={this.muzisExpand}
-            muzi={this.muzisOnClick()}
-          />
+          <Muzis muzis={this.state.muzis} inputRef={this.muzisRef} />
+          <DetailMuzi muzisExpand={this.muzisExpand} />
         </div>
       </section>
     );
