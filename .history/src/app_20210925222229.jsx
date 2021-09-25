@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <section className={style.borad}>
         <Header />
-        <div className={style.center}>
+        <div onClick={this.test} className={style.center}>
           <Navbar />
           <Muzis inputRef={this.muzisRef} />
           <DetailMuzi muzisExpand={this.muzisExpand} />

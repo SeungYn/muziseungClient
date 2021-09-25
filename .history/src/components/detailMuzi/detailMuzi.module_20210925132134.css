@@ -32,6 +32,7 @@
 .closeButton {
   cursor: pointer;
   display: flex;
+  align-items: center;
 }
 
 .closeButton i {

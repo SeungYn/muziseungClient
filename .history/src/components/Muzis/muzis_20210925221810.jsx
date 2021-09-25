@@ -7,7 +7,11 @@ class Muzis extends Component {
   allContainerRef = this.props.inputRef;
   render() {
     return (
-      <section ref={this.allContainerRef} className={styles.allContainer}>
+      <section
+        ref={this.allContainerRef}
+        className={styles.allContainer}
+        onClick={this.test}
+      >
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>
           <Muzi />

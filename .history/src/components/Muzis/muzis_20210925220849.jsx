@@ -4,10 +4,12 @@ import MuziForm from '../muziForm/muziForm';
 import styles from './muzis.module.css';
 
 class Muzis extends Component {
-  allContainerRef = this.props.inputRef;
   render() {
     return (
-      <section ref={this.allContainerRef} className={styles.allContainer}>
+      <section
+        ref={(this.props.inputRef, this.asd)}
+        className={styles.allContainer}
+      >
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>
           <Muzi />

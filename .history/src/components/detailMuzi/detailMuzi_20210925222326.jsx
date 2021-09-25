@@ -6,7 +6,7 @@ class DetailMuzi extends Component {
   containerRef = React.createRef();
   deleteComments = () => {
     this.containerRef.current.style.display = 'none';
-    this.props.muzisExpand();
+    this.props.muzixExpand();
   };
 
   render() {

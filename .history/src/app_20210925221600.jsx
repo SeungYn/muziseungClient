@@ -9,9 +9,7 @@ import MuziForm from './components/muziForm/muziForm';
 
 class App extends Component {
   muzisRef = React.createRef();
-  muzisExpand = () => {
-    this.muzisRef.current.style.flexBasis = '85%';
-  };
+
   render() {
     return (
       <section className={style.borad}>
@@ -19,7 +17,7 @@ class App extends Component {
         <div className={style.center}>
           <Navbar />
           <Muzis inputRef={this.muzisRef} />
-          <DetailMuzi muzisExpand={this.muzisExpand} />
+          <DetailMuzi />
         </div>
       </section>
     );

@@ -4,10 +4,13 @@ import MuziForm from '../muziForm/muziForm';
 import styles from './muzis.module.css';
 
 class Muzis extends Component {
-  allContainerRef = this.props.inputRef;
+  test = React.forwardRef((props, ref) => (
+    <section ref={ref} className={styles.allContainer}></section>
+  ));
+  ref = React.createRef();
   render() {
     return (
-      <section ref={this.allContainerRef} className={styles.allContainer}>
+      <test ref={ref}>
         <div className={styles.title}>Muzi</div>
         <ul className={styles.container}>
           <Muzi />
@@ -21,7 +24,7 @@ class Muzis extends Component {
           <Muzi />
         </ul>
         <MuziForm />
-      </section>
+      </test>
     );
   }
 }
