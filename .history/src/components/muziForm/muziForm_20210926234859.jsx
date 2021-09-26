@@ -13,7 +13,6 @@ class MuziForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     const text = this.textRef.current.value;
-    console.log(text);
     text && this.props.onAddMuzi(text, this.props.selectedMuzi);
     this.formRef.current.reset();
     const obj = this.textRef.current;

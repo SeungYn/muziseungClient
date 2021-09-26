@@ -89,7 +89,7 @@ class App extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text, selectedMuzi) => {
+  onAddMuzi = (text) => {
     const muzis = [
       ...this.state.muzis,
       {
@@ -100,11 +100,8 @@ class App extends Component {
         comments: null,
       },
     ];
-    if (selectedMuzi) {
-      this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
-    } else {
-      this.setState({ muzis });
-    }
+
+    this.setState({ muzis });
   };
 
   render() {

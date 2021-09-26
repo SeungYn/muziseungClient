@@ -81,7 +81,7 @@ class App extends Component {
 
   //무지 클릭시 선택되게 하기
   onClickSelectMuzi = (muzi) => {
-    this.setState({ selectedMuzi: { ...muzi } });
+    this.setState({ selectedMuzi: { muzi } });
   };
   //detailMuzi에 있는 x있는 거 클릭시 화면 늘리기 이럴꺼면 왜 상위 컴퍼넌트 ref 할려고 똥꼬쇼 한거지;;
   //다시생각하니 state 비교를 했을때 똑같아서 실행안됨 ㅋㅇ 보류 다시 원상복구
@@ -89,7 +89,7 @@ class App extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text, selectedMuzi) => {
+  onAddMuzi = (text) => {
     const muzis = [
       ...this.state.muzis,
       {
@@ -100,11 +100,8 @@ class App extends Component {
         comments: null,
       },
     ];
-    if (selectedMuzi) {
-      this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
-    } else {
-      this.setState({ muzis });
-    }
+
+    this.setState({ muzis });
   };
 
   render() {
@@ -123,6 +120,7 @@ class App extends Component {
           />
           {this.state.selectedMuzi && (
             <DetailMuzi
+              muzisExpand={this.muzisExpand}
               selectedMuzi={this.state.selectedMuzi}
               unClickSelectMuzi={this.unClickSelectMuzi}
             />

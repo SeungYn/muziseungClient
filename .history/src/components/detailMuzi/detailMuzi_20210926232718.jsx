@@ -30,10 +30,10 @@ class DetailMuzi extends Component {
         </div>
         <ul className={styles.comments}>
           <DetailMuziComment muzi={this.props.selectedMuzi} />
-          {this.props.selectedMuzi.comments &&
-            this.props.selectedMuzi.comments.map((comment) => (
-              <DetailMuziComment muzi={comment} />
-            ))}
+          {this.props.comments &&
+            this.props.muzi.comments.map((comment) => {
+              <DetailMuziComment muzi={comment} />;
+            })}
         </ul>
         <DetailMuziCommentForm />
       </section>

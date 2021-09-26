@@ -9,7 +9,7 @@ import MuziForm from './components/muziForm/muziForm';
 
 class App extends Component {
   state = {
-    selectedMuzi: null,
+    selectedMuzi: true,
     muzis: [
       {
         id: 1,
@@ -100,11 +100,8 @@ class App extends Component {
         comments: null,
       },
     ];
-    if (selectedMuzi) {
-      this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
-    } else {
-      this.setState({ muzis });
-    }
+
+    this.setState({ muzis });
   };
 
   render() {

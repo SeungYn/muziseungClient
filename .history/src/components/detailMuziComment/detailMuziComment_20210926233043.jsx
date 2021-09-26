@@ -3,12 +3,12 @@ import styles from './detailMuziComment.module.css';
 
 class DetailMuziComment extends Component {
   render() {
-    const { userName, text, time } = this.props.muzi;
+    console.log(this.props.muzi);
     return (
       <li className={styles.comment}>
-        <span className={styles.name}>{userName}</span>
-        <span className={styles.time}>{text}</span>
-        <p className={styles.text}>{time}</p>
+        <span className={styles.name}>{}</span>
+        <span className={styles.time}>{}</span>
+        <p className={styles.text}>{}</p>
       </li>
     );
   }

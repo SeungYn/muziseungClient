@@ -7,8 +7,8 @@ class DetailMuziComment extends Component {
     return (
       <li className={styles.comment}>
         <span className={styles.name}>{userName}</span>
-        <span className={styles.time}>{text}</span>
-        <p className={styles.text}>{time}</p>
+        <span className={styles.time}>{time}</span>
+        <p className={styles.text}>{text}</p>
       </li>
     );
   }

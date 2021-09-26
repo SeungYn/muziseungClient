@@ -6,9 +6,9 @@ class DetailMuziComment extends Component {
     const { userName, text, time } = this.props.muzi;
     return (
       <li className={styles.comment}>
-        <span className={styles.name}>{userName}</span>
-        <span className={styles.time}>{text}</span>
-        <p className={styles.text}>{time}</p>
+        <span className={styles.name}>유승윤</span>
+        <span className={styles.time}>11:28</span>
+        <p className={styles.text}>안녕 하세요 저는 유승윤 fds</p>
       </li>
     );
   }

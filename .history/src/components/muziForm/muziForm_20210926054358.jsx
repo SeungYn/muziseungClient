@@ -10,11 +10,9 @@ class MuziForm extends Component {
     obj.style.height = obj.scrollHeight + 'px';
   };
 
-  onSubmit = (event) => {
-    event.preventDefault();
+  onSubmit = () => {
     const text = this.textRef.current.value;
-    console.log(text);
-    text && this.props.onAddMuzi(text, this.props.selectedMuzi);
+    text && this.props.onAddMuzi(text);
     this.formRef.current.reset();
     const obj = this.textRef.current;
     obj.style.height = 'auto';

@@ -100,11 +100,8 @@ class App extends Component {
         comments: null,
       },
     ];
-    if (selectedMuzi) {
-      this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
-    } else {
-      this.setState({ muzis });
-    }
+
+    this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
   };
 
   render() {
