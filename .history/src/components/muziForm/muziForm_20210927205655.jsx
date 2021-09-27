@@ -13,10 +13,10 @@ class MuziForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     const text = this.textRef.current.value;
-    text && this.props.onAddMuzi(text, this.props.selectedMuzi);
+    text && this.props.onAddMuzi(this.nl2br(text), this.props.selectedMuzi);
     this.formRef.current.reset();
+
     const obj = this.textRef.current;
-    this.textRef.current.value = '';
     obj.style.height = 'auto';
   };
 
@@ -27,7 +27,7 @@ class MuziForm extends Component {
       if (textAll.length - 1 === i) {
         return text;
       }
-      return text + '<br />';
+      return text + '</br>';
     });
     return filteredText.join('');
   };

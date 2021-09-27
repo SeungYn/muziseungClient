@@ -15,9 +15,8 @@ class MuziForm extends Component {
     const text = this.textRef.current.value;
     text && this.props.onAddMuzi(text, this.props.selectedMuzi);
     this.formRef.current.reset();
-    const obj = this.textRef.current;
-    this.textRef.current.value = '';
-    obj.style.height = 'auto';
+    //const obj = this.textRef.current;
+    //obj.style.height = 'auto';
   };
 
   //\n을 </br>로 치환해서 화면에 나올수있게하는 메서드

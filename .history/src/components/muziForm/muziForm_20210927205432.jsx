@@ -12,22 +12,24 @@ class MuziForm extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    const text = this.textRef.current.value;
+
+    const text = this.textRef.current.value
+      .split('\n')
+      .map((text, i) => text + '</br>');
+
     text && this.props.onAddMuzi(text, this.props.selectedMuzi);
     this.formRef.current.reset();
     const obj = this.textRef.current;
-    this.textRef.current.value = '';
     obj.style.height = 'auto';
   };
 
-  //\n을 </br>로 치환해서 화면에 나올수있게하는 메서드
   nl2br = (text) => {
-    const textAll = text.split('\n');
+    const textAll = this.textRef.current.value.split('\n');
     const filteredText = textAll.map((text, i) => {
-      if (textAll.length - 1 === i) {
+      if (textAll.length() - 1 === i) {
         return text;
       }
-      return text + '<br />';
+      return text + '</br>';
     });
     return filteredText.join('');
   };
