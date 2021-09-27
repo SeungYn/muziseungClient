@@ -1,0 +1,52 @@
+.container {
+  background-color: red;
+
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+}
+
+.selected {
+  flex-basis: 35%;
+  display: flex;
+}
+
+.unselected {
+  display: none;
+}
+
+.comments {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.comments::-webkit-scrollbar {
+  width: 10px;
+}
+
+.comments::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 10px;
+}
+
+.header {
+  border-bottom: 1px solid #ffffff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments {
+  overflow: hidden;
+}
+
+.closeButton {
+  cursor: pointer;
+  display: flex;
+}
+
+.closeButton i {
+  align-items: center;
+}
