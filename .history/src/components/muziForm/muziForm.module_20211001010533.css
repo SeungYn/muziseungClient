@@ -38,7 +38,7 @@
 }
 .bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .muziButton {
@@ -49,6 +49,10 @@
   border: none;
   background-color: teal;
   color: muziFontColor;
-  padding: 6px;
+  padding: 3px;
   border-radius: 5px;
+}
+
+.muziButton > i {
+  padding: 5px;
 }

@@ -4,8 +4,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
+  padding: 0.5rem;
+
   font-size: 0;
 }
 
@@ -19,7 +19,7 @@
   resize: none;
   outline: none;
   border: none;
-  font-size: 1rem;
+  font-size: 16px;
   height: 36px;
   border-radius: 2px;
   background-color: transparent;
@@ -29,6 +29,15 @@
   color: muziFontColor;
 }
 
+.text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 10px;
+}
+
 .bottom::before {
   content: '@';
   display: block;
@@ -36,6 +45,7 @@
   background-color: transparent;
   color: #546e7a;
 }
+
 .bottom {
   display: flex;
   justify-content: space-between;

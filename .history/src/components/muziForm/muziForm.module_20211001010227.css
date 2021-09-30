@@ -29,7 +29,7 @@
   color: muziFontColor;
 }
 
-.bottom::before {
+.bottom::after {
   content: '@';
   display: block;
   font-size: 1rem;
@@ -37,11 +37,11 @@
   color: #546e7a;
 }
 .bottom {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 
 .muziButton {
+  position: absolute;
   cursor: pointer;
   right: 0px;
   top: 0;
@@ -49,6 +49,9 @@
   border: none;
   background-color: teal;
   color: muziFontColor;
-  padding: 6px;
-  border-radius: 5px;
+  padding: 2px;
+}
+
+.muziButton > i {
+  padding: 5px;
 }
