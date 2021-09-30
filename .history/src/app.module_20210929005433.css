@@ -1,0 +1,20 @@
+/* 
+  배경색 : 
+  from배경색 : 546e7a
+  선색 : #ffffff
+*/
+.borad {
+  background-color: yellow;
+  width: 90%;
+  height: 90%;
+  border: 1px solid yellow;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  height: 95%;
+  display: flex;
+}

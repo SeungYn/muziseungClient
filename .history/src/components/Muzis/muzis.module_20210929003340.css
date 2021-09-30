@@ -1,0 +1,39 @@
+.allContainer {
+  height: 100%;
+  background-color: #263238;
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectedMuzi {
+  flex-basis: 85%;
+}
+
+.unSelectedMuzi {
+  flex-basis: 50%;
+}
+
+.container {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #cfd8dc;
+  border-radius: 10px;
+}
+
+.title {
+  border-bottom: 1px solid #ffffff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,16 @@
+.navbar {
+  background-color: black;
+  flex-basis: 15%;
+  display: block;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+}
+
+.title {
+  border-bottom: 1px solid #ffffff;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}

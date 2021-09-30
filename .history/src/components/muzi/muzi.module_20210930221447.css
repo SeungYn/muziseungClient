@@ -1,0 +1,13 @@
+.muzi {
+  border-bottom: 1px solid #ffffff;
+  padding: 1rem;
+}
+
+.comment {
+  margin-top: 5px;
+}
+
+.text {
+  margin: 0;
+  white-space: pre-line;
+}

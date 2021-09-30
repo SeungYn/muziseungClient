@@ -1,0 +1,17 @@
+@value muziBackgroundColor, muziBorderColor, muziFontColor from '../../common/color.css';
+
+.muzi {
+  border-bottom: 1px solid muziBorderColor;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.comment {
+  margin-top: 5px;
+}
+
+.text {
+  margin: 0;
+  white-space: pre-line;
+  margin-top: 2px;
+}

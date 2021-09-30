@@ -1,0 +1,19 @@
+@value navbarBackgroundColor, muziBorderColor, muziFontColor from '../../common/color.css';
+
+.navbar {
+  background-color: navbarBackgroundColor;
+  flex-basis: 15%;
+  display: block;
+  border: 1px solid muziBorderColor;
+  border-top: none;
+  border-right: none;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  color: ;
+}
+
+.title {
+  border-bottom: 1px solid muziBorderColor;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
