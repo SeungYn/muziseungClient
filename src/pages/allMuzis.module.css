@@ -1,0 +1,16 @@
+/* 
+  배경색 : 
+  from배경색 : 546e7a
+  선색 : #ffffff
+*/
+.borad {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  height: 95%;
+  display: flex;
+}

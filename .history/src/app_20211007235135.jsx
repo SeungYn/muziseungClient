@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AllMuzis from './pages/allMuzis';
+import AllMuzis from './pages/AllMuzis';
 
 class App extends Component {
   render() {
