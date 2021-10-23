@@ -3,20 +3,6 @@ import styles from './muzi.module.css';
 
 class Muzi extends Component {
   liRef = React.createRef();
-  state = {
-    count: 0,
-  };
-
-  allContainerRef = this.props.inputRef;
-  // componentDidMount() {
-  //   fetch(`http://localhost:8080/muziComments/${this.props.}`, requestOptions)
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       this.setState({ muzis: result });
-  //       console.log(result);
-  //     });
-  // }
-
   onClickSelectMuzi = () => {
     this.props.onClickSelectMuzi(this.props.muzi);
   };
@@ -33,7 +19,7 @@ class Muzi extends Component {
   };
 
   render() {
-    const { id, username, createdAt, text } = this.props.muzi;
+    const { id, username, createdAt, text, comments } = this.props.muzi;
 
     return (
       <li
@@ -44,6 +30,7 @@ class Muzi extends Component {
         <span className={styles.name}>{username}</span>
         <span className={styles.time}>{createdAt}</span>
         <p className={styles.text}>{text}</p>
+        {comments && <div className={styles.comment}>{`개의 답글`}</div>}
       </li>
     );
   }

@@ -4,6 +4,19 @@ import MuziForm from '../muziForm/muziForm';
 import styles from './muzis.module.css';
 
 class Muzis extends Component {
+  state = {
+    count: 0,
+  };
+
+  allContainerRef = this.props.inputRef;
+  componentDidMount() {
+    fetch('http://localhost:8080/muzis', requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        this.setState({ muzis: result });
+        console.log(result);
+      });
+  }
   render() {
     return (
       <section

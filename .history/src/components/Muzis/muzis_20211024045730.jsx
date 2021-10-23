@@ -4,6 +4,8 @@ import MuziForm from '../muziForm/muziForm';
 import styles from './muzis.module.css';
 
 class Muzis extends Component {
+  allContainerRef = this.props.inputRef;
+
   render() {
     return (
       <section

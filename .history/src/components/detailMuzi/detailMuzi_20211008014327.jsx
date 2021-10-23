@@ -5,7 +5,7 @@ import styles from './detailMuzi.module.css';
 class DetailMuzi extends Component {
   containerRef = React.createRef();
   scrollRef = React.createRef();
-
+  commentsRef = [];
   deleteComments = () => {
     this.props.unClickSelectMuzi();
   };
@@ -31,7 +31,7 @@ class DetailMuzi extends Component {
               count={0}
               commentsLength={1}
             />
-            {this.props.selectedMuzi.comments !== 0 &&
+            {this.props.selectedMuzi.comments &&
               this.props.selectedMuzi.comments.map((comment, i) => (
                 <DetailMuziComment
                   count={i}

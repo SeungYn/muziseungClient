@@ -34,24 +34,22 @@ class AllMuzis extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text) => {
-    const requestOptions = {
-      method: 'POST',
-      redirect: 'follow',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+  onAddMuzi = (text, selectedMuzi) => {
+    const muzis = [
+      ...this.state.muzis,
+      {
+        id: Date.now(),
+        username: '유승윤',
+        createAt: 1131,
         text,
-        username: '한중영',
-        name: '한중영',
-        
-      }),
-    };
-
-    fetch('http://localhost:8080/muzis', requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        this.setState({ muzis: [...this.state.muzis, result] });
-      });
+        comments: null,
+      },
+    ];
+    if (selectedMuzi) {
+      this.setState({ selectedMuzi: { ...selectedMuzi }, muzis });
+    } else {
+      this.setState({ muzis });
+    }
   };
   //개선점 생각해보기 notion
   onAddMuziComment = (MuziId, text, userName) => {

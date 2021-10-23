@@ -34,7 +34,7 @@ class AllMuzis extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text) => {
+  onAddMuzi = (text, selectedMuzi) => {
     const requestOptions = {
       method: 'POST',
       redirect: 'follow',
@@ -43,7 +43,6 @@ class AllMuzis extends Component {
         text,
         username: '한중영',
         name: '한중영',
-        
       }),
     };
 

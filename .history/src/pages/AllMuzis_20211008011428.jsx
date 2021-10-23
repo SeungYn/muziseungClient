@@ -34,24 +34,35 @@ class AllMuzis extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text) => {
+  onAddMuzi = (text, selectedMuzi) => {
     const requestOptions = {
       method: 'POST',
       redirect: 'follow',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        text,
-        username: '한중영',
-        name: '한중영',
-        
-      }),
+      'Content-Type': 'application/json',
     };
 
     fetch('http://localhost:8080/muzis', requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        this.setState({ muzis: [...this.state.muzis, result] });
+        this.setState({ muzis: result });
+        console.log(result);
       });
+
+    const muzis = [
+      ...this.state.muzis,
+      {
+        id: Date.now(),
+        username: '유승윤',
+        createdAt: '11:31',
+        text,
+        comments: null,
+      },
+    ];
+    if (selectedMuzi) {
+      this.setState({ muzis });
+    } else {
+      this.setState({ muzis });
+    }
   };
   //개선점 생각해보기 notion
   onAddMuziComment = (MuziId, text, userName) => {

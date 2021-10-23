@@ -43,7 +43,6 @@ class AllMuzis extends Component {
         text,
         username: '한중영',
         name: '한중영',
-        
       }),
     };
 

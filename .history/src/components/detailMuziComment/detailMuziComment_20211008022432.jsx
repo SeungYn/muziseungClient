@@ -17,7 +17,7 @@ class DetailMuziComment extends Component {
   };
 
   render() {
-    const { username, text, createdAt } = this.props.muzi;
+    const { userName, text, time } = this.props.muzi;
     return (
       <li ref={this.liRef} className={styles.comment}>
         <span className={styles.name}>{username}</span>

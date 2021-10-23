@@ -34,7 +34,7 @@ class AllMuzis extends Component {
     this.setState({ selectedMuzi: null });
   };
 
-  onAddMuzi = (text) => {
+  onAddMuzi = (text, selectedMuzi) => {
     const requestOptions = {
       method: 'POST',
       redirect: 'follow',
@@ -43,14 +43,13 @@ class AllMuzis extends Component {
         text,
         username: '한중영',
         name: '한중영',
-        
       }),
     };
 
     fetch('http://localhost:8080/muzis', requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        this.setState({ muzis: [...this.state.muzis, result] });
+        this.setState({ muzis: [result, ...this.state.muzis] });
       });
   };
   //개선점 생각해보기 notion
