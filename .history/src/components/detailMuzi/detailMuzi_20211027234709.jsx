@@ -3,29 +3,8 @@ import DetailMuziComment from '../detailMuziComment/detailMuziComment';
 import DetailMuziCommentForm from '../detailMuziCommentForm/detailMuziCommentForm';
 import styles from './detailMuzi.module.css';
 class DetailMuzi extends Component {
-  state = {
-    comments: [],
-  };
-
   containerRef = React.createRef();
   scrollRef = React.createRef();
-
-  componentDidMount() {
-    console.log('fda');
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    };
-
-    fetch(
-      `http://localhost:8080/muziComments/${this.props.selectedMuzi.id}`,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ comments: [...data] });
-      });
-  }
 
   deleteComments = () => {
     this.props.unClickSelectMuzi();
@@ -52,14 +31,6 @@ class DetailMuzi extends Component {
               count={0}
               commentsLength={1}
             />
-            {this.state.comments &&
-              this.state.comments.map((comment, i) => (
-                <DetailMuziComment
-                  count={i}
-                  commentsLength={this.state.comments.length - 1}
-                  muzi={comment}
-                />
-              ))}
           </ul>
         </>
         <DetailMuziCommentForm

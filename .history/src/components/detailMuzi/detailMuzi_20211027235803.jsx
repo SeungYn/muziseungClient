@@ -11,7 +11,6 @@ class DetailMuzi extends Component {
   scrollRef = React.createRef();
 
   componentDidMount() {
-    console.log('fda');
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
@@ -52,11 +51,11 @@ class DetailMuzi extends Component {
               count={0}
               commentsLength={1}
             />
-            {this.state.comments &&
-              this.state.comments.map((comment, i) => (
+            {this.props.selectedMuzi.comments !== 0 &&
+              this.props.selectedMuzi.comments.map((comment, i) => (
                 <DetailMuziComment
                   count={i}
-                  commentsLength={this.state.comments.length - 1}
+                  commentsLength={this.props.selectedMuzi.comments.length - 1}
                   muzi={comment}
                 />
               ))}

@@ -11,7 +11,6 @@ class DetailMuzi extends Component {
   scrollRef = React.createRef();
 
   componentDidMount() {
-    console.log('fda');
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
@@ -24,6 +23,7 @@ class DetailMuzi extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ comments: [...data] });
+        console.log('fda');
       });
   }
 

@@ -11,7 +11,6 @@ class DetailMuzi extends Component {
   scrollRef = React.createRef();
 
   componentDidMount() {
-    console.log('fda');
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
