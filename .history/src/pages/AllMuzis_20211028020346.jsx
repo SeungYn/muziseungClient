@@ -110,6 +110,7 @@ class AllMuzis extends Component {
             selectedMuzi={this.state.selectedMuzi}
             muzis={this.state.muzis}
             onAddMuzi={this.onAddMuzi}
+            comments={this.state.comments}
           />
           {this.state.selectedMuzi && (
             <DetailMuzi

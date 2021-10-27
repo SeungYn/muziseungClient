@@ -34,7 +34,7 @@ class Muzi extends Component {
 
   render() {
     const { id, username, createdAt, text, commentsCount } = this.props.muzi;
-
+    console.log(commentsCount);
     return (
       <li
         ref={this.liRef}
@@ -44,9 +44,7 @@ class Muzi extends Component {
         <span className={styles.name}>{username}</span>
         <span className={styles.time}>{createdAt}</span>
         <p className={styles.text}>{text}</p>
-        {commentsCount > 0 && (
-          <div className={styles.comment}>{`${commentsCount}개의 답글`}</div>
-        )}
+        <p className={styles.text}>{commentsCount}</p>
       </li>
     );
   }

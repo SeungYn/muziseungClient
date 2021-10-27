@@ -23,7 +23,7 @@ class AllMuzis extends Component {
       .then((response) => response.json())
       .then((result) => {
         this.setState({ muzis: result });
-        console.log('result');
+        console.log(result);
       });
   }
 
@@ -42,7 +42,7 @@ class AllMuzis extends Component {
       });
   };
 
-  unClickSelectMuzi = () => {
+  unClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: null, comments: null });
   };
 
@@ -87,11 +87,10 @@ class AllMuzis extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({
-          comments: [...this.state.comments, data],
+          comments: [...this.state.comments, ...data],
         });
       });
   };
-
   addCommentFliter = (comments) => {
     if (comments) {
       return [...comments];

@@ -42,7 +42,7 @@ class AllMuzis extends Component {
       });
   };
 
-  unClickSelectMuzi = () => {
+  unClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: null, comments: null });
   };
 
@@ -86,12 +86,12 @@ class AllMuzis extends Component {
     fetch('http://localhost:8080/muziComments', requestOptions)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         this.setState({
           comments: [...this.state.comments, data],
         });
       });
   };
-
   addCommentFliter = (comments) => {
     if (comments) {
       return [...comments];

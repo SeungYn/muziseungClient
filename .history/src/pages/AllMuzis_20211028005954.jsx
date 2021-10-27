@@ -23,27 +23,29 @@ class AllMuzis extends Component {
       .then((response) => response.json())
       .then((result) => {
         this.setState({ muzis: result });
-        console.log('result');
+        console.log(result);
       });
   }
 
   onClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: { ...muzi } });
-
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
     };
 
-    fetch(`http://localhost:8080/muziComments/${muzi.id}`, requestOptions)
+    fetch(
+      `http://localhost:8080/muziComments/${this.selectedMuzi.id}`,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((data) => {
         this.setState({ comments: [...data] });
       });
   };
 
-  unClickSelectMuzi = () => {
-    this.setState({ selectedMuzi: null, comments: null });
+  unClickSelectMuzi = (muzi) => {
+    this.setState({ selectedMuzi: null });
   };
 
   onAddMuzi = (text) => {
@@ -66,32 +68,34 @@ class AllMuzis extends Component {
   };
   //개선점 생각해보기 notion
   onAddMuziComment = (MuziId, text, userName) => {
-    const myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json');
-
-    const raw = JSON.stringify({
-      muziId: MuziId,
-      text: text,
-      username: '테스트에요',
-      name: '테으스테요',
-    });
-
-    const requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow',
+    const comment = {
+      id: Date.now(),
+      userName: '한준영',
+      time: '25:11',
+      text,
     };
 
-    fetch('http://localhost:8080/muziComments', requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          comments: [...this.state.comments, data],
-        });
-      });
-  };
+    const muzis = this.state.muzis.map((muzi) => {
+      if (muzi.id === MuziId) {
+        let comments = null;
+        if (muzi.comments) {
+          comments = [...muzi.comments, { ...comment }];
+        } else {
+          comments = [{ ...comment }];
+        }
 
+        return {
+          ...muzi,
+          comments: [...comments],
+        };
+      }
+      return { ...muzi };
+    });
+
+    const selectedMuzi = muzis.find((muzi) => muzi.id === MuziId);
+
+    this.setState({ selectedMuzi, muzis });
+  };
   addCommentFliter = (comments) => {
     if (comments) {
       return [...comments];

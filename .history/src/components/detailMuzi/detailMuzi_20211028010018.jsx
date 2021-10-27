@@ -33,7 +33,11 @@ class DetailMuzi extends Component {
             />
             {this.props.comments &&
               this.props.comments.map((comment, i) => (
-                <DetailMuziComment key={comment.createdAt} muzi={comment} />
+                <DetailMuziComment
+                  count={i}
+                  commentsLength={this.props.comments.length - 1}
+                  muzi={comment}
+                />
               ))}
           </ul>
         </>

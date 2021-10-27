@@ -23,7 +23,7 @@ class AllMuzis extends Component {
       .then((response) => response.json())
       .then((result) => {
         this.setState({ muzis: result });
-        console.log('result');
+        console.log(result);
       });
   }
 
@@ -42,7 +42,7 @@ class AllMuzis extends Component {
       });
   };
 
-  unClickSelectMuzi = () => {
+  unClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: null, comments: null });
   };
 
@@ -70,10 +70,10 @@ class AllMuzis extends Component {
     myHeaders.append('Content-Type', 'application/json');
 
     const raw = JSON.stringify({
-      muziId: MuziId,
-      text: text,
-      username: '테스트에요',
-      name: '테으스테요',
+      muziId: '1',
+      text: 'New Message ',
+      username: 'bob',
+      name: 'bob',
     });
 
     const requestOptions = {
@@ -85,13 +85,8 @@ class AllMuzis extends Component {
 
     fetch('http://localhost:8080/muziComments', requestOptions)
       .then((response) => response.json())
-      .then((data) => {
-        this.setState({
-          comments: [...this.state.comments, data],
-        });
-      });
+      .then((result) => console.log(result));
   };
-
   addCommentFliter = (comments) => {
     if (comments) {
       return [...comments];

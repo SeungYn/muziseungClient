@@ -45,7 +45,7 @@ class Muzi extends Component {
         <span className={styles.time}>{createdAt}</span>
         <p className={styles.text}>{text}</p>
         {commentsCount > 0 && (
-          <div className={styles.comment}>{`${commentsCount}개의 답글`}</div>
+          <div className={styles.comment}>{`${comments.length}개의 답글`}</div>
         )}
       </li>
     );

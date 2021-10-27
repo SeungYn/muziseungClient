@@ -42,7 +42,7 @@ class AllMuzis extends Component {
       });
   };
 
-  unClickSelectMuzi = () => {
+  unClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: null, comments: null });
   };
 

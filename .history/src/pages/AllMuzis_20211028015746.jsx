@@ -42,7 +42,7 @@ class AllMuzis extends Component {
       });
   };
 
-  unClickSelectMuzi = () => {
+  unClickSelectMuzi = (muzi) => {
     this.setState({ selectedMuzi: null, comments: null });
   };
 
@@ -91,7 +91,6 @@ class AllMuzis extends Component {
         });
       });
   };
-
   addCommentFliter = (comments) => {
     if (comments) {
       return [...comments];
