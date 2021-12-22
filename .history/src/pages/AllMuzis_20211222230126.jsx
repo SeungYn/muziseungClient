@@ -112,7 +112,7 @@ class AllMuzis extends Component {
       return item;
     });
 
-    this.setState({ muzis });
+    console.log(muzis);
   };
 
   addCommentFliter = (comments) => {

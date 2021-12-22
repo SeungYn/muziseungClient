@@ -94,8 +94,7 @@ class AllMuzis extends Component {
     this.muziCommentCountUpdate(MuziId);
   };
 
-  //댓글 업데이트 되면 게시판 댓글수 갱신해주기
-  muziCommentCountUpdate = async (muziId) => {
+  muziCommentCountUpdate = (muziId) => {
     const requestOptions = {
       method: 'GET',
       redirect: 'follow',
@@ -105,14 +104,7 @@ class AllMuzis extends Component {
       `http://localhost:8080/muzis/${muziId}`,
       requestOptions
     ).then((response) => response.json());
-    const muzis = this.state.muzis.map((item) => {
-      if (item.id === muziId) {
-        return update;
-      }
-      return item;
-    });
-
-    this.setState({ muzis });
+    console.log(update);
   };
 
   addCommentFliter = (comments) => {
