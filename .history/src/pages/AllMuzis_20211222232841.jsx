@@ -105,7 +105,6 @@ class AllMuzis extends Component {
       `http://localhost:8080/muzis/${muziId}`,
       requestOptions
     ).then((response) => response.json());
-
     const muzis = this.state.muzis.map((item) => {
       if (item.id === muziId) {
         return update;
@@ -113,7 +112,6 @@ class AllMuzis extends Component {
       return item;
     });
     console.log('update');
-    console.log(muzis === this.state.muzis);
     this.setState({ muzis });
   };
 

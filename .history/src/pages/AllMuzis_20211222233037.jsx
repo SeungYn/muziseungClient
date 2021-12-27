@@ -113,7 +113,6 @@ class AllMuzis extends Component {
       return item;
     });
     console.log('update');
-    console.log(muzis === this.state.muzis);
     this.setState({ muzis });
   };
 
