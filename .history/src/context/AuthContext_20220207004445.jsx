@@ -17,7 +17,7 @@ const AuthContext = createContext({});
 const contextRef = createRef();
 
 export function AuthProvider({ authService, authErrorEventBus, children }) {
-  const [user, setUser] = useState(authService.login('tmddbs', 'abcd1234'));
+  const [user, setUser] = useState('');
   console.log('auth1');
   useImperativeHandle(contextRef, () => (user ? user.token : undefined));
 

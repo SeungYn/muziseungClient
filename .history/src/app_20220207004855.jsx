@@ -11,7 +11,7 @@ class App extends Component {
         <>
           <Route
             exact
-            path='/'
+            path='/a'
             element={
               <AllMuzis
                 muziService={this.props.muziService}

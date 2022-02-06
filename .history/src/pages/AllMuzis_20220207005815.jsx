@@ -68,26 +68,25 @@ const AllMuzis = ({ muziService, commentService, username, addable }) => {
   };
 
   return (
-    <section className={style.borad}>
-      <Header />
-      <div className={style.center}>
-        <Navbar />
-        <Muzis
-          onClickSelectMuzi={onClickSelectMuzi}
+    //<section className={style.borad}>
+    <div className={style.center}>
+      <Navbar />
+      <Muzis
+        onClickSelectMuzi={onClickSelectMuzi}
+        selectedMuzi={selectedMuzi}
+        muzis={muzis}
+        onAddMuzi={onAddMuzi}
+      />
+      {selectedMuzi && (
+        <DetailMuzi
           selectedMuzi={selectedMuzi}
-          muzis={muzis}
-          onAddMuzi={onAddMuzi}
+          unClickSelectMuzi={unClickSelectMuzi}
+          onAddMuziComment={onAddMuziComment}
+          comments={comments}
         />
-        {selectedMuzi && (
-          <DetailMuzi
-            selectedMuzi={selectedMuzi}
-            unClickSelectMuzi={unClickSelectMuzi}
-            onAddMuziComment={onAddMuziComment}
-            comments={comments}
-          />
-        )}
-      </div>
-    </section>
+      )}
+    </div>
+    //</section>
   );
 };
 

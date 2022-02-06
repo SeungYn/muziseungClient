@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AllMuzis from './pages/allMuzis';
 import Login from './pages/Login';
-
 class App extends Component {
   render() {
     return (
@@ -11,7 +10,7 @@ class App extends Component {
         <>
           <Route
             exact
-            path='/'
+            path='/a'
             element={
               <AllMuzis
                 muziService={this.props.muziService}
@@ -20,7 +19,7 @@ class App extends Component {
             }
           />
 
-          <Route exact path='/w' element={<Login />} />
+          <Route exact='/l' element={<Login />}></Route>
         </>
         )
       </Routes>

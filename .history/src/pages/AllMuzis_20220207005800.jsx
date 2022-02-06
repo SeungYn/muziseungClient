@@ -69,7 +69,6 @@ const AllMuzis = ({ muziService, commentService, username, addable }) => {
 
   return (
     <section className={style.borad}>
-      <Header />
       <div className={style.center}>
         <Navbar />
         <Muzis

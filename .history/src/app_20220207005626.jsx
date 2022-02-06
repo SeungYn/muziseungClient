@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Header from './components/header/header';
 import AllMuzis from './pages/allMuzis';
 import Login from './pages/Login';
 
 class App extends Component {
   render() {
     return (
+      <Header />
       <Routes>
         (
         <>

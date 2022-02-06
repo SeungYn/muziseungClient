@@ -11,7 +11,7 @@ class App extends Component {
         <>
           <Route
             exact
-            path='/'
+            path='/a'
             element={
               <AllMuzis
                 muziService={this.props.muziService}
@@ -20,7 +20,7 @@ class App extends Component {
             }
           />
 
-          <Route exact path='/w' element={<Login />} />
+          <Route exact='/w' element={<Login />} />
         </>
         )
       </Routes>

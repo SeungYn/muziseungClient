@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AllMuzis from './pages/allMuzis';
-import Login from './pages/Login';
 
 class App extends Component {
   render() {
@@ -19,8 +18,6 @@ class App extends Component {
               />
             }
           />
-
-          <Route exact path='/w' element={<Login />} />
         </>
         )
       </Routes>
