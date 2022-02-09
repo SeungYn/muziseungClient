@@ -43,18 +43,5 @@
 }
 
 .form_input {
-  height: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.form_signup {
-  margin-bottom: 0.5rem;
-}
-
-.form_btn {
-  background: white;
-}
-
-.form_btn:hover {
-  cursor: pointer;
+  height: 1rem;
 }

@@ -13,11 +13,6 @@ const Login = ({ onSignUp, onLogin }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (signup) {
-      onSignUp(username, password, name, email, url);
-    } else {
-      onLogin(username, password);
-    }
   };
 
   const onChange = (e) => {

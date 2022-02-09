@@ -11,15 +11,6 @@ const Login = ({ onSignUp, onLogin }) => {
   const [text, setText] = useState('');
   const [isAlert, setIsAlert] = useState(false);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (signup) {
-      onSignUp(username, password, name, email, url);
-    } else {
-      onLogin(username, password);
-    }
-  };
-
   const onChange = (e) => {
     const {
       target: { name, value, checked },
@@ -44,7 +35,7 @@ const Login = ({ onSignUp, onLogin }) => {
   return (
     <section className={styles.form_board}>
       <div className={styles.title}>{signup ? '회원가입' : '로그인'}</div>
-      <form className={styles.auth_form} onSubmit={onSubmit}>
+      <form className={styles.auth_form}>
         <input
           type='text'
           name='username'

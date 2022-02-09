@@ -51,10 +51,6 @@
   margin-bottom: 0.5rem;
 }
 
-.form_btn {
-  background: white;
-}
-
 .form_btn:hover {
   cursor: pointer;
 }

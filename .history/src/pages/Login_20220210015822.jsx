@@ -11,15 +11,6 @@ const Login = ({ onSignUp, onLogin }) => {
   const [text, setText] = useState('');
   const [isAlert, setIsAlert] = useState(false);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (signup) {
-      onSignUp(username, password, name, email, url);
-    } else {
-      onLogin(username, password);
-    }
-  };
-
   const onChange = (e) => {
     const {
       target: { name, value, checked },
@@ -43,14 +34,13 @@ const Login = ({ onSignUp, onLogin }) => {
   };
   return (
     <section className={styles.form_board}>
-      <div className={styles.title}>{signup ? '회원가입' : '로그인'}</div>
-      <form className={styles.auth_form} onSubmit={onSubmit}>
+      <div className='form-title'>{signup ? '회원가입' : '로그인'}</div>
+      <form className={styles.auth_form}>
         <input
           type='text'
           name='username'
           placeholder='Id'
-          value={username}
-          className={styles.form_input}
+          className='form-input'
           onChange={onChange}
         />
         <input
@@ -58,7 +48,7 @@ const Login = ({ onSignUp, onLogin }) => {
           name='password'
           placeholder='Password'
           value={password}
-          className={styles.form_input}
+          className='form-input'
           onChange={onChange}
         />
         {signup && (
@@ -68,7 +58,7 @@ const Login = ({ onSignUp, onLogin }) => {
             placeholder='Name'
             value={name}
             onChange={onChange}
-            className={styles.form_input}
+            className='form-input'
             required
           />
         )}
@@ -79,7 +69,7 @@ const Login = ({ onSignUp, onLogin }) => {
             placeholder='Email'
             value={email}
             onChange={onChange}
-            className={styles.form_input}
+            className='form-input'
             required
           />
         )}
@@ -90,10 +80,10 @@ const Login = ({ onSignUp, onLogin }) => {
             placeholder='Profile Image URL'
             value={url}
             onChange={onChange}
-            className={styles.form_input}
+            className='form-input'
           />
         )}
-        <div className={styles.form_signup}>
+        <div className='form-signup'>
           <input
             name='signup'
             id='signup'
@@ -103,7 +93,7 @@ const Login = ({ onSignUp, onLogin }) => {
           />
           <label htmlFor='signup'> Create a new account?</label>
         </div>
-        <button className={styles.form_btn} type='submit'>
+        <button className='form-btn auth-form-btn' type='submit'>
           {signup ? '회원가입' : '로그인'}
         </button>
       </form>

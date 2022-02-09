@@ -11,15 +11,6 @@ const Login = ({ onSignUp, onLogin }) => {
   const [text, setText] = useState('');
   const [isAlert, setIsAlert] = useState(false);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (signup) {
-      onSignUp(username, password, name, email, url);
-    } else {
-      onLogin(username, password);
-    }
-  };
-
   const onChange = (e) => {
     const {
       target: { name, value, checked },

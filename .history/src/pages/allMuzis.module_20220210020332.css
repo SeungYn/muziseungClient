@@ -32,29 +32,10 @@
   border: 1px solid #ffffff;
   border-radius: 20px;
   text-align: center;
-  color: white;
 }
 
 .auth_form {
   display: flex;
   flex-direction: column;
-  padding: 2rem 3rem;
-  padding-top: 0;
-}
-
-.form_input {
-  height: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.form_signup {
-  margin-bottom: 0.5rem;
-}
-
-.form_btn {
-  background: white;
-}
-
-.form_btn:hover {
-  cursor: pointer;
+  padding: 1rem 3rem;
 }

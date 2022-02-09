@@ -1,0 +1,25 @@
+import React from 'react';
+
+const Login = ({ onSignUp, onLogin }) => {
+  const [username, setUsername] = useState('');
+
+  const onChange = (e) => {
+    const {
+      target: { name, value, checked },
+    } = e;
+    console.log(value);
+  };
+  return (
+    <form className='auth-form'>
+      <input
+        type='text'
+        name='username'
+        placeholder='Id'
+        className='form-input'
+        onChange={onChange}
+      />
+    </form>
+  );
+};
+
+export default Login;
