@@ -14,14 +14,14 @@ const Login = ({ onSignUp, onLogin }) => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (signup) {
-      onSignUp(username, password, name, email, url).catch(setError);
+      onSignUp(username, password, name, email, url);
     } else {
-      onLogin(username, password).catch(setError);
+      onLogin(username, password);
     }
   };
 
   const setError = (error) => {
-    console.log(error.toString());
+    console.log(error);
     setText(error.toString());
     setIsAlert(true);
   };

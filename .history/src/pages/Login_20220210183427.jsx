@@ -21,7 +21,7 @@ const Login = ({ onSignUp, onLogin }) => {
   };
 
   const setError = (error) => {
-    console.log(error.toString());
+    console.log(error.ms);
     setText(error.toString());
     setIsAlert(true);
   };
